@@ -537,7 +537,7 @@ public final class RequestValidator {
   private static boolean validateBatchStatus(Request request) {
     boolean status = false;
     try {
-      status = checkProgressStatus(Integer.parseInt("" + request.getRequest().get(JsonKey.STATUS)));
+       status = checkProgressStatus(Integer.parseInt("" + request.getRequest().get(JsonKey.STATUS)));
 
     } catch (Exception e) {
       ProjectLogger.log(e.getMessage(), e);
